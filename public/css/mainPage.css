@@ -1,0 +1,49 @@
+p{
+    align-content: center; 
+    margin-top: auto; 
+    margin-bottom:auto;
+    font-size: 1.1rem;
+    color: black;
+}
+.filters, .totalProtocolos{
+    margin-top: 3px;
+    margin-left: 25px;
+    margin-bottom: 3px;
+    background-color: rgba(25, 45, 162, 0.1);
+    color: black;
+}
+.filter-checkbox{
+    margin-right: 15px;
+}
+
+#mp-fluxoEstoque-qtdeFluxo-contentWrapper, #mp-fluxoEstoque-qtdeEstoque-contentWrapper{
+    background-color: rgba(25, 45, 162, 0.1);
+    margin-top: 4px;
+}
+#mp-filtros-content-wrapper, #mp-totalProt-content-wrapper, #mp-fluxoEstoque-content-wrapper, #mp-buttons-content-wrapper{
+    margin: 5px 5px;
+    border: 2px;
+    border-style: inset;
+    border-color: black;
+}
+.p-2 > .form-control {
+    height: auto;
+    display: inline;
+}
+.h4{
+    color: black;
+}
+#registrosFluxo{
+    text-align: right;
+}
+thead input {
+    width: 100%;
+}
+@media only screen and (max-width: 576px){
+    #registrosFluxo, #registrosEstoque {
+        text-align: center;
+    }
+    #estoque-text-content-wrapper * p, #fluxo-text-content-wrapper * p {
+        text-align: center;
+    }
+}

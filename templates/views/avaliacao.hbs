@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- HANDLEBARS -->
+    <title>{{title}}</title>
+<!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<!-- CUSTOMIZED CSS -->
+    <link rel="stylesheet" media="screen" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/mainPage.css">
+<!-- DATATABLES CSS -->
+    <link rel="stylesheet" href="/css/datatables/dataTables.min.css">
+    <link rel="stylesheet" href="/css/datatables/select.dataTables.min.css">
+    <link rel="stylesheet" href="/css/datatables/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/css/datatables/fixedHeader.dataTables.css">
+    <link rel="stylesheet" href="/css/datatables/dataTables.css">
+<!-- ICON -->
+    <link rel="icon" type="image/ico" href="/img/bbFavicon.ico">
+</head>
+<body>
+    <header>{{> header}}</header>
+<!-- ================================================================================================= -->
+  <!--Main PAGE - INICIO - OTHER COMPONENTS - ALERTS -->
+    <div class="container" style="padding-top: 5px;">
+        <div class="row">
+            <div class="col">
+                <div id="successAlert" class="alert alert-success collapse" role="alert">
+                    <strong>Sucesso!</strong>
+                    <button id="successAlertCloseBtn" type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div id="successMsg">testes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="dangerAlert" class="alert alert-danger collapse" role="alert">
+                    <strong>Erro!</strong> 
+                    <button id="dangerAlertCloseBtn" type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div id="dangerMsg">testes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Main PAGE - FIM - OTHER COMPONENTS - ALERTS -->
+<!-- ================================================================================================= -->
+<!--Main Page -INICIO - FORM -->
+    <div id="main-form-wrapper" class="container" style="padding-top: 15px;">
+        <div id="dropdown-wrapper" class="container">
+            <select id="selectO" class="form-control" style="font-weight: 600;" style="border:black  1px solid">
+                {{#each data.fer as |f|}}
+                    {{#if @first}}
+                        <option id="{{f.id}}" style="">Selecione a ferramenta</option>
+                        <option id="{{f.id}}" style="">{{f.Ferramenta}} - {{f.Desenvolvedor}}</option>
+                    {{else}}
+                        <option id="{{f.id}}" style="">{{f.Ferramenta}} - {{f.Desenvolvedor}}</option>
+                    {{/if}}
+                {{/each}}
+            </select>
+        </div>
+        <div class="container" style="padding-top: 15px;">
+            <div class="container" style="display: inline;">
+                <div class="row">
+                    <div class="col-12 text-left" style="color:black">
+                        <input id="notAnswer" type="checkbox"> <strong>    Não avaliar</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="firstQuestion-wrapper" class="container" style="padding-top: 15px;" >
+            <div class="row">
+                <div class="col-3">
+                    <p>O prazo combinado, considerando as diligências, foi cumprido?</p>
+                </div>
+                <div class="col-9">
+                    <textarea name="text1" id="text1" cols="30" rows="5" style="width: 100%; height:75px!important" maxlength="255"></textarea>
+                    <p id="p1_texto"  style="font-size: 12px;">255 caracteres</p>
+                </div>
+            </div>
+        </div>
+        <div id="SecondQuestion-wrapper" class="container" style="padding-top: 15px;" >
+            <div class="row">
+                <div class="col-3">
+                    <p>A entrega do produto foi feita conforme a especificação?</p>
+                </div>
+                <div class="col-9">
+                    <textarea name="text2" id="text2" cols="30" rows="5" style="width: 100%; height:75px!important" maxlength="255"></textarea>
+                    <p  id="p2_texto" style="font-size: 12px;">255 caracteres</p>
+                </div>
+            </div>
+        </div>
+        <div id="nota_container" class="container" style="padding-top: 15px;">
+            <p>Nota para a ferramenta:</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                <label class="form-check-label" for="exampleRadios1" style="color: black;">
+                    1
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2" style="color: black;">
+                    2
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option2">
+                <label class="form-check-label" for="exampleRadios3" style="color: black;">
+                    3
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option2">
+                <label class="form-check-label" for="exampleRadios4" style="color: black;">
+                    4
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option2">
+                <label class="form-check-label" for="exampleRadios5" style="color: black;">
+                    5
+                </label>
+            </div>
+        </div>
+        <div class="cotainer text-center" style="padding-top: 15px;">
+            <button id="btn-enviar" class="btn-primary aligng-right">Enviar</button>
+        </div>
+    </div>
+<!--Main Page -FIM - FORM -->
+<!-- ================================================================================================= -->
+    <footer class="">{{>footer}}</footer>
+</body>
+<!-- BOOTSTRAP JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<!-- AJAX MOMENT JS -->
+<script src="/js/datatables/ajax.moment.min.js"></script>
+<!-- DATATABLE JS -->
+<script src="/js/datatables/jquery.dataTables.min.js"></script>
+<script src="/js/datatables/dataTables.select.min.js"></script>
+<script src="/js/datatables/dataTables.fixedHeader.js"></script>
+<!-- CUSTOMIZED JS -->
+<script src="/js/priorizadosTodos/variablesAndFuncionts.js"></script>
+
+</html>

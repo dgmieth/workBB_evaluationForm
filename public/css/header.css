@@ -1,0 +1,165 @@
+/*======================================================================================
+                            estilos do BODY
+  ======================================================================================*/
+body{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*======================================================================================
+                            estilos do .navbar
+  ======================================================================================*/
+.navbar {
+    background-color: rgba(14, 32, 116, 1);
+    height: 40px;
+}
+/*======================================================================================
+                            estilos do .navbar-toggler and .navbar-toggler-icon
+  ======================================================================================*/
+  .navbar-toggler {
+    padding: 0;
+    line-height: 0;
+    font-size: 1rem;
+    height: 30px;
+    border: 3.5px solid  rgba(255, 232, 86, 1);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke=' rgba(255, 232, 86, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+.navbar-toggler-icon {
+    height: 1.3em;
+}
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+/*======================================================================================
+                            estilos do .navbar-nav
+  ======================================================================================*/
+  .navbar-nav, .dropdown-menu {
+    background-color: rgba(14, 32, 116, 1);
+}
+/*======================================================================================
+                            estilos do .navbar-item
+  ======================================================================================*/
+
+/*======================================================================================
+                            estilos do .navbar-link
+  ======================================================================================*/
+.nav-link, .dropdown-item{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 232, 86, 1);
+}
+.nav-link:hover, .dropdown-item:hover {
+    color: rgba(218, 190, 9, 1)!important;
+    font-weight: 600!important;
+    text-decoration: none;
+}
+.active-bold{
+    font-weight: 650!important;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: transparent!important;
+}
+/*======================================================================================
+                            estilos do #content-wrapper
+  ======================================================================================*/
+#content-wrapper {
+    height: 75px;
+    background-color: rgba(49, 71, 170, 1);
+}
+/*======================================================================================
+                            estilos do #container-left
+  ======================================================================================*/
+#homeBtn, #container-left {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+/*======================================================================================
+                            estilos do #container-right
+  ======================================================================================*/
+#container-right{
+    height: 100%;
+}
+/*======================================================================================
+                            estilos do .p-2
+  ======================================================================================*/
+.p-2 {
+    padding: .05rem !important;
+    margin-left: .5rem;
+}
+/*======================================================================================
+                            estilos do div inside #text-wrapper
+  ======================================================================================*/
+#text-wrapper > div {
+    color: white;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+/*======================================================================================
+                            estilos do #bb-wrapper
+  ======================================================================================*/
+#bb-wrapper {
+    height: 45px;
+    font-size: 2em;
+    color: white;
+}
+/*======================================================================================
+                            estilos do #gecor-wrapper
+  ======================================================================================*/
+#gecor-wrapper {
+    font-size: 1,3em;
+}
+/*======================================================================================
+                            estilos do #page-title-wrapper
+  ======================================================================================*/
+#page-title-wrapper{
+    background-color: rgba(255, 238, 128, 1);
+}
+/*======================================================================================
+                            estilos do .h2 inside #page-title-wrapper
+  ======================================================================================*/
+#page-title-wrapper > h2{
+    color: rgba(24,46,148,1);
+    align-content: center;
+    text-align: center;
+}
+/*======================================================================================
+                            media queries
+  ======================================================================================*/
+@media  only screen and (max-width: 700px){
+    #page-title-wrapper > h2{
+        font-size: 1.4rem;
+    }
+}
+@media  only screen and (max-width: 500px){
+    #page-title-wrapper > h2{
+        font-size: 1.2rem;
+    }
+}
+@media  only screen and (max-width: 370px){
+    #bb-wrapper{
+        height: 30px
+    }
+    #bb-wrapper > h1{
+        font-size: 1.5rem;
+    }
+    #gecor-wrapper > h6{
+        font-size: 0.9rem;
+    }
+}
+@media  only screen and (max-width: 280px){
+    #bb-wrapper{
+        height: 25px
+    }
+    #bb-wrapper > h1{
+        font-size: 1.2rem;
+    }
+    #gecor-wrapper > h6{
+        font-size: 0.75rem;
+    }
+}
